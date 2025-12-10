@@ -4,7 +4,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
 from model import HashiPuzzle
-from solvers import PySATSolver, AStarSolver, NaiveBacktrackingSolver, OptimizedBacktrackingSolver, BruteForceSolver 
+from solvers import PySATSolver, AStarSolver, NaiveBacktrackingSolver, OptimizedBacktrackingSolver, BruteForceSolver
 
 class ExperimentRunner:
     """Run experiments across multiple solvers and test cases"""
