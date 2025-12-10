@@ -988,8 +988,8 @@ else:
                                     backgroundColor: '#F3F4F6'
                                 }}
                             }},
-                                React.createElement('div', {{ style: {{ width: num === 1 ? '4px' : '2px', height: '100%', backgroundColor: '#3B82F6' }} }}),
-                                num === 2 && React.createElement('div', {{ style: {{ width: '2px', height: '100%', backgroundColor: '#3B82F6' }} }})
+                                React.createElement('div', {{ style: {{ width: num === 1 ? '4px' : '2px', height: '100%', backgroundColor: '#F59E0B' }} }}),
+                                num === 2 && React.createElement('div', {{ style: {{ width: '2px', height: '100%', backgroundColor: '#F59E0B' }} }})
                             );
                         }}
                     }}
