@@ -1045,7 +1045,7 @@ else:
                             cursor: historyIndex >= history.length - 1 ? 'not-allowed' : 'pointer',
                             fontWeight: 'bold'
                         }}
-                    }}, '↪️ Redo(Ctrl+Y)'),
+                    }}, '↪️ Redo (Ctrl+Y)'),
                     React.createElement('button', {{
                         onClick: checkSolution,
                         style: {{ padding: '10px 20px', backgroundColor: '#10B981', color: 'white', border: 'none', borderRadius: '6px', cursor: 'pointer', fontWeight: 'bold' }}
