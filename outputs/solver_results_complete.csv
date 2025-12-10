@@ -1,0 +1,28 @@
+input_file,grid_size,num_islands,solver,success,solve_time,nodes_expanded,num_variables,num_clauses
+inputs/input-01.txt,4x4,5,PySAT,True,0.0002827644348144531,0,16,26
+inputs/input-01.txt,4x4,5,A* (Simple),True,0.00016069412231445312,5,0,0
+inputs/input-01.txt,4x4,5,A* (Advanced),True,0.00013136863708496094,5,0,0
+inputs/input-01.txt,4x4,5,Naive Backtracking,True,0.00014257431030273438,35,0,0
+inputs/input-01.txt,4x4,5,Optimized Backtracking,True,0.0001919269561767578,3,0,0
+inputs/input-01.txt,4x4,5,Brute Force,True,9.942054748535156e-05,41,0,0
+inputs/input-02.txt,5x5,10,PySAT,True,0.0004279613494873047,0,40,78
+inputs/input-02.txt,5x5,10,A* (Simple),True,0.0004107952117919922,25,0,0
+inputs/input-02.txt,5x5,10,A* (Advanced),True,0.0005040168762207031,10,0,0
+inputs/input-02.txt,5x5,10,Naive Backtracking,True,0.0305325984954834,3482,0,0
+inputs/input-02.txt,5x5,10,Optimized Backtracking,True,0.0003948211669921875,10,0,0
+inputs/input-02.txt,5x5,10,Brute Force,True,0.045151710510253906,29531,0,0
+inputs/input-03.txt,6x6,15,PySAT,True,0.0009911060333251953,0,76,275
+inputs/input-03.txt,6x6,15,A* (Simple),True,0.0017104148864746094,125,0,0
+inputs/input-03.txt,6x6,15,A* (Advanced),True,0.0020792484283447266,24,0,0
+inputs/input-03.txt,6x6,15,Naive Backtracking,False,3.2054495811462402,200015,0,0
+inputs/input-03.txt,6x6,15,Optimized Backtracking,True,0.0012657642364501953,23,0,0
+inputs/input-03.txt,6x6,15,Brute Force,False,0.16599583625793457,100001,0,0
+inputs/input-04.txt,7x7,20,PySAT,True,0.00136566162109375,0,104,388
+inputs/input-04.txt,7x7,20,A* (Simple),True,0.0066835880279541016,451,0,0
+inputs/input-04.txt,7x7,20,A* (Advanced),True,0.0020101070404052734,20,0,0
+inputs/input-04.txt,7x7,20,Naive Backtracking,False,3.864135980606079,200026,0,0
+inputs/input-04.txt,7x7,20,Optimized Backtracking,True,0.0014786720275878906,25,0,0
+inputs/input-04.txt,7x7,20,Brute Force,False,0.18105411529541016,100001,0,0
+inputs/input-23.txt,30x30,300,PySAT,True,0.11346244812011719,0,2160,17544
+inputs/input-24.txt,35x35,400,PySAT,True,0.16970229148864746,0,2920,24377
+inputs/input-25.txt,40x40,500,PySAT,True,0.35190677642822266,0,3680,31349
