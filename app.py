@@ -679,6 +679,24 @@ else:
                 }}, 1000);
                 return () => clearInterval(interval);
             }}, [startTime]);
+            
+            useEffect(() => {{
+                const handleKeyDown = (e) => {{
+                    // Ctrl+Z hoặc Cmd+Z cho Undo
+                    if ((e.ctrlKey || e.metaKey) && e.key === 'z' && !e.shiftKey) {{
+                        e.preventDefault();
+                        undo();
+                    }}
+                    // Ctrl+Y hoặc Cmd+Shift+Z cho Redo
+                    if ((e.ctrlKey || e.metaKey) && (e.key === 'y' || (e.shiftKey && e.key === 'z'))) {{
+                        e.preventDefault();
+                        redo();
+                    }}
+                }};
+                
+                window.addEventListener('keydown', handleKeyDown);
+                return () => window.removeEventListener('keydown', handleKeyDown);
+            }}, [historyIndex, history]);
 
             // Hàm format thời gian MM:SS
             const formatTime = (seconds) => {{
@@ -1014,7 +1032,7 @@ else:
                             cursor: historyIndex === 0 ? 'not-allowed' : 'pointer',
                             fontWeight: 'bold'
                         }}
-                    }}, '↩️ Undo'),
+                    }}, '↩️ Undo (Ctrl+Z)'),
                     React.createElement('button', {{
                         onClick: redo,
                         disabled: historyIndex >= history.length - 1,
@@ -1027,7 +1045,7 @@ else:
                             cursor: historyIndex >= history.length - 1 ? 'not-allowed' : 'pointer',
                             fontWeight: 'bold'
                         }}
-                    }}, '↪️ Redo'),
+                    }}, '↪️ Redo(Ctrl+Y)'),
                     React.createElement('button', {{
                         onClick: checkSolution,
                         style: {{ padding: '10px 20px', backgroundColor: '#10B981', color: 'white', border: 'none', borderRadius: '6px', cursor: 'pointer', fontWeight: 'bold' }}
