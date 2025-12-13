@@ -3,7 +3,6 @@ from model import HashiPuzzle, BridgeVariable
 from utils import BridgeUtils 
 
 class ConstraintPropagation:
-    """Class containing constraint propagation rules"""
 
     def __init__(self, puzzle: HashiPuzzle):
         self.puzzle = puzzle
@@ -12,7 +11,6 @@ class ConstraintPropagation:
         self.min_bridges = {}
 
     def apply_all_rules(self):
-        """Apply all rules and return forced bridges"""
         self.forced_bridges = {}
         self.forbidden_bridges = set()
         self.min_bridges = {}
@@ -162,7 +160,6 @@ class ConstraintPropagation:
         return self.min_bridges.get(bridge_key, 0)
     
 class CNFGenerator:
-    """Class to generate CNF constraints for Hashiwokakero"""
 
     def __init__(self, puzzle: HashiPuzzle):
         self.puzzle = puzzle

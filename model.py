@@ -1,7 +1,6 @@
 import numpy as np 
 
 class HashiPuzzle:
-    """Class to represent Hashiwokakero puzzle"""
 
     def __init__(self, grid):
         self.grid = np.array(grid)
@@ -10,7 +9,6 @@ class HashiPuzzle:
         self.bridges = {}
 
     def _find_islands(self):
-        """Find all islands in grid"""
         islands = []
         for i in range(self.rows):
             for j in range(self.cols):
@@ -19,7 +17,6 @@ class HashiPuzzle:
         return islands
 
     def get_neighbors(self, island):
-        """Find all islands that can connect to this island"""
         row, col, _ = island
         neighbors = []
 
@@ -39,7 +36,6 @@ class HashiPuzzle:
 
     @staticmethod
     def read_from_file(filename):
-        """Read puzzle from file"""
         with open(filename, 'r') as f:
             lines = f.readlines()
 
@@ -52,7 +48,6 @@ class HashiPuzzle:
 
 
 class BridgeVariable:
-    """Class to manage logic variables for bridges"""
 
     def __init__(self, puzzle: HashiPuzzle):
         self.puzzle = puzzle

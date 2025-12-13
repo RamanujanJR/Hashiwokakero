@@ -1,0 +1,133 @@
+input_file,grid_size,num_islands,solver,success,solve_time,nodes_expanded,num_variables,num_clauses
+inputs/input-01.txt,4x4,5,PySAT,True,0.0,0,16,26
+inputs/input-01.txt,4x4,5,A* (Simple),True,0.00484466552734375,5,0,0
+inputs/input-01.txt,4x4,5,A* (Advanced),True,0.0,5,0,0
+inputs/input-01.txt,4x4,5,Naive Backtracking,True,0.0014808177947998047,35,0,0
+inputs/input-01.txt,4x4,5,Optimized Backtracking,True,0.0,3,0,0
+inputs/input-01.txt,4x4,5,Brute Force,True,0.0,41,0,0
+inputs/input-02.txt,5x5,10,PySAT,True,0.0008289813995361328,0,40,78
+inputs/input-02.txt,5x5,10,A* (Simple),True,0.0011129379272460938,25,0,0
+inputs/input-02.txt,5x5,10,A* (Advanced),True,0.002000570297241211,10,0,0
+inputs/input-02.txt,5x5,10,Naive Backtracking,True,0.06191658973693848,3482,0,0
+inputs/input-02.txt,5x5,10,Optimized Backtracking,True,0.0,10,0,0
+inputs/input-02.txt,5x5,10,Brute Force,True,0.08225607872009277,29531,0,0
+inputs/input-03.txt,6x6,15,PySAT,True,0.0,0,76,275
+inputs/input-03.txt,6x6,15,A* (Simple),True,0.004153013229370117,125,0,0
+inputs/input-03.txt,6x6,15,A* (Advanced),True,0.008233785629272461,24,0,0
+inputs/input-03.txt,6x6,15,Naive Backtracking,False,7.0433690547943115,200015,0,0
+inputs/input-03.txt,6x6,15,Optimized Backtracking,True,0.0019979476928710938,23,0,0
+inputs/input-03.txt,6x6,15,Brute Force,False,0.3942439556121826,100001,0,0
+inputs/input-04.txt,7x7,20,PySAT,True,0.0013427734375,0,104,388
+inputs/input-04.txt,7x7,20,A* (Simple),True,0.015826702117919922,451,0,0
+inputs/input-04.txt,7x7,20,A* (Advanced),True,0.0044116973876953125,20,0,0
+inputs/input-04.txt,7x7,20,Naive Backtracking,False,8.72301697731018,200026,0,0
+inputs/input-04.txt,7x7,20,Optimized Backtracking,True,0.005278348922729492,25,0,0
+inputs/input-04.txt,7x7,20,Brute Force,False,0.380481481552124,100001,0,0
+inputs/input-05.txt,8x8,25,PySAT,True,0.0017998218536376953,0,136,586
+inputs/input-05.txt,8x8,25,A* (Simple),True,0.20611834526062012,6054,0,0
+inputs/input-05.txt,8x8,25,A* (Advanced),True,0.013490915298461914,29,0,0
+inputs/input-05.txt,8x8,25,Naive Backtracking,False,9.377918720245361,200047,0,0
+inputs/input-05.txt,8x8,25,Optimized Backtracking,True,0.006402730941772461,37,0,0
+inputs/input-05.txt,8x8,25,Brute Force,False,0.5005824565887451,100001,0,0
+inputs/input-06.txt,9x9,30,PySAT,True,0.0058290958404541016,0,168,822
+inputs/input-06.txt,9x9,30,A* (Simple),True,0.08565092086791992,1763,0,0
+inputs/input-06.txt,9x9,30,A* (Advanced),True,0.01519632339477539,33,0,0
+inputs/input-06.txt,9x9,30,Naive Backtracking,False,11.387768030166626,200056,0,0
+inputs/input-06.txt,9x9,30,Optimized Backtracking,True,0.0061798095703125,37,0,0
+inputs/input-06.txt,9x9,30,Brute Force,False,0.45039939880371094,100001,0,0
+inputs/input-07.txt,10x10,35,PySAT,True,0.004078388214111328,0,200,1014
+inputs/input-07.txt,10x10,35,A* (Simple),True,0.3839998245239258,8975,0,0
+inputs/input-07.txt,10x10,35,A* (Advanced),True,0.02394247055053711,47,0,0
+inputs/input-07.txt,10x10,35,Naive Backtracking,False,11.233737707138062,200066,0,0
+inputs/input-07.txt,10x10,35,Optimized Backtracking,True,0.0021638870239257812,38,0,0
+inputs/input-07.txt,10x10,35,Brute Force,False,0.5148086547851562,100001,0,0
+inputs/input-08.txt,11x11,40,PySAT,True,0.0068950653076171875,0,236,1305
+inputs/input-08.txt,11x11,40,A* (Simple),True,0.8007969856262207,16761,0,0
+inputs/input-08.txt,11x11,40,A* (Advanced),True,0.04642987251281738,55,0,0
+inputs/input-08.txt,11x11,40,Naive Backtracking,False,13.215651273727417,200089,0,0
+inputs/input-08.txt,11x11,40,Optimized Backtracking,True,0.00939488410949707,39,0,0
+inputs/input-08.txt,11x11,40,Brute Force,False,0.6088516712188721,100001,0,0
+inputs/input-09.txt,12x12,50,PySAT,True,0.012842416763305664,0,304,1760
+inputs/input-09.txt,12x12,50,A* (Simple),False,7.26599383354187,100001,0,0
+inputs/input-09.txt,12x12,50,A* (Advanced),True,0.08693528175354004,91,0,0
+inputs/input-09.txt,12x12,50,Naive Backtracking,False,15.391160726547241,200123,0,0
+inputs/input-09.txt,12x12,50,Optimized Backtracking,True,0.026501178741455078,97,0,0
+inputs/input-09.txt,12x12,50,Brute Force,False,0.6384074687957764,100001,0,0
+inputs/input-10.txt,13x13,60,PySAT,True,0.013419389724731445,0,376,2293
+inputs/input-10.txt,13x13,60,A* (Simple),False,8.250710248947144,100001,0,0
+inputs/input-10.txt,13x13,60,A* (Advanced),True,0.3934950828552246,250,0,0
+inputs/input-10.txt,13x13,60,Naive Backtracking,False,17.285284519195557,200159,0,0
+inputs/input-10.txt,13x13,60,Optimized Backtracking,True,0.04925179481506348,101,0,0
+inputs/input-10.txt,13x13,60,Brute Force,False,0.78566575050354,100001,0,0
+inputs/input-11.txt,14x14,70,PySAT,True,0.023708820343017578,0,448,2928
+inputs/input-11.txt,14x14,70,A* (Simple),False,9.875422239303589,100001,0,0
+inputs/input-11.txt,14x14,70,A* (Advanced),True,0.14537262916564941,91,0,0
+inputs/input-11.txt,14x14,70,Naive Backtracking,False,23.151178121566772,200177,0,0
+inputs/input-11.txt,14x14,70,Optimized Backtracking,True,0.04806399345397949,112,0,0
+inputs/input-11.txt,14x14,70,Brute Force,False,0.8375527858734131,100001,0,0
+inputs/input-12.txt,15x15,80,PySAT,True,0.07559919357299805,0,520,3429
+inputs/input-12.txt,15x15,80,A* (Simple),False,10.484789609909058,100001,0,0
+inputs/input-12.txt,15x15,80,A* (Advanced),True,0.45191335678100586,183,0,0
+inputs/input-12.txt,15x15,80,Naive Backtracking,False,23.03474736213684,200220,0,0
+inputs/input-12.txt,15x15,80,Optimized Backtracking,True,0.07145237922668457,165,0,0
+inputs/input-12.txt,15x15,80,Brute Force,False,0.9393899440765381,100001,0,0
+inputs/input-13.txt,16x16,90,PySAT,True,0.02467179298400879,0,592,4086
+inputs/input-13.txt,16x16,90,A* (Simple),False,12.09347677230835,100001,0,0
+inputs/input-13.txt,16x16,90,A* (Advanced),True,1.608445167541504,576,0,0
+inputs/input-13.txt,16x16,90,Naive Backtracking,False,29.044487714767456,200241,0,0
+inputs/input-13.txt,16x16,90,Optimized Backtracking,True,0.06185603141784668,116,0,0
+inputs/input-13.txt,16x16,90,Brute Force,False,1.0528919696807861,100001,0,0
+inputs/input-14.txt,17x17,100,PySAT,True,0.02999424934387207,0,664,4499
+inputs/input-14.txt,17x17,100,A* (Simple),False,14.26308298110962,100001,0,0
+inputs/input-14.txt,17x17,100,A* (Advanced),True,0.8262803554534912,239,0,0
+inputs/input-14.txt,17x17,100,Naive Backtracking,False,35.878135442733765,200260,0,0
+inputs/input-14.txt,17x17,100,Optimized Backtracking,True,0.16287493705749512,368,0,0
+inputs/input-14.txt,17x17,100,Brute Force,False,1.013157606124878,100001,0,0
+inputs/input-15.txt,18x18,110,PySAT,True,0.07162928581237793,0,736,5142
+inputs/input-15.txt,18x18,110,A* (Simple),False,16.57592225074768,100001,0,0
+inputs/input-15.txt,18x18,110,A* (Advanced),True,7.149724245071411,1795,0,0
+inputs/input-15.txt,18x18,110,Naive Backtracking,False,33.63020300865173,200297,0,0
+inputs/input-15.txt,18x18,110,Optimized Backtracking,True,0.3524177074432373,591,0,0
+inputs/input-15.txt,18x18,110,Brute Force,False,1.2705800533294678,100001,0,0
+inputs/input-16.txt,19x19,120,PySAT,True,0.0941317081451416,0,808,5677
+inputs/input-16.txt,19x19,120,A* (Simple),False,15.37583613395691,100001,0,0
+inputs/input-16.txt,19x19,120,A* (Advanced),True,11.405292510986328,2672,0,0
+inputs/input-16.txt,19x19,120,Naive Backtracking,False,38.672507762908936,200345,0,0
+inputs/input-16.txt,19x19,120,Optimized Backtracking,True,1.57279372215271,1857,0,0
+inputs/input-16.txt,19x19,120,Brute Force,False,1.2662577629089355,100001,0,0
+inputs/input-17.txt,20x20,130,PySAT,True,0.041390419006347656,0,880,6371
+inputs/input-17.txt,20x20,130,A* (Simple),False,19.1119327545166,100001,0,0
+inputs/input-17.txt,20x20,130,A* (Advanced),True,23.50198221206665,5194,0,0
+inputs/input-17.txt,20x20,130,Naive Backtracking,False,37.99506974220276,200374,0,0
+inputs/input-17.txt,20x20,130,Optimized Backtracking,True,1.4457614421844482,1774,0,0
+inputs/input-17.txt,20x20,130,Brute Force,False,1.523777723312378,100001,0,0
+inputs/input-18.txt,21x21,140,PySAT,True,0.07091140747070312,0,952,6940
+inputs/input-18.txt,21x21,140,A* (Simple),False,20.587695360183716,100001,0,0
+inputs/input-18.txt,21x21,140,A* (Advanced),True,12.694132566452026,2332,0,0
+inputs/input-18.txt,21x21,140,Naive Backtracking,False,42.06834554672241,200415,0,0
+inputs/input-18.txt,21x21,140,Optimized Backtracking,True,0.20976495742797852,260,0,0
+inputs/input-18.txt,21x21,140,Brute Force,False,1.5154106616973877,100001,0,0
+inputs/input-19.txt,22x22,155,PySAT,True,0.0669255256652832,0,1064,7956
+inputs/input-19.txt,22x22,155,A* (Simple),False,19.618279933929443,100001,0,0
+inputs/input-19.txt,22x22,155,A* (Advanced),False,60.00263857841492,9171,0,0
+inputs/input-19.txt,22x22,155,Naive Backtracking,False,51.87767553329468,200479,0,0
+inputs/input-19.txt,22x22,155,Optimized Backtracking,True,0.2830028533935547,350,0,0
+inputs/input-19.txt,22x22,155,Brute Force,False,1.7042756080627441,100001,0,0
+inputs/input-20.txt,23x23,170,PySAT,True,0.06911611557006836,0,1176,8856
+inputs/input-20.txt,23x23,170,A* (Simple),False,23.188694715499878,100001,0,0
+inputs/input-20.txt,23x23,170,A* (Advanced),False,60.00374460220337,4965,0,0
+inputs/input-20.txt,23x23,170,Naive Backtracking,False,55.972331285476685,200508,0,0
+inputs/input-20.txt,23x23,170,Optimized Backtracking,True,1.628007173538208,1366,0,0
+inputs/input-20.txt,23x23,170,Brute Force,False,1.9599671363830566,100001,0,0
+inputs/input-21.txt,24x24,185,PySAT,True,0.1499769687652588,0,1288,9835
+inputs/input-21.txt,24x24,185,A* (Simple),False,25.389785289764404,100001,0,0
+inputs/input-21.txt,24x24,185,A* (Advanced),False,60.00068187713623,6843,0,0
+inputs/input-21.txt,24x24,185,Naive Backtracking,False,60.0569281578064,192807,0,0
+inputs/input-21.txt,24x24,185,Optimized Backtracking,True,25.53314185142517,16890,0,0
+inputs/input-21.txt,24x24,185,Brute Force,False,2.243216037750244,100001,0,0
+inputs/input-22.txt,25x25,200,PySAT,True,0.15532827377319336,0,1400,10732
+inputs/input-22.txt,25x25,200,A* (Simple),False,25.209410190582275,100001,0,0
+inputs/input-22.txt,25x25,200,A* (Advanced),False,60.01147270202637,6011,0,0
+inputs/input-22.txt,25x25,200,Naive Backtracking,False,60.06297945976257,188196,0,0
+inputs/input-22.txt,25x25,200,Optimized Backtracking,False,60.01434254646301,46110,0,0
+inputs/input-22.txt,25x25,200,Brute Force,False,2.3578033447265625,100001,0,0

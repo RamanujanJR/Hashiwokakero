@@ -27,7 +27,6 @@ class BridgeUtils:
 
     @staticmethod
     def is_connected(bridges, all_islands):
-        """Check if all islands are connected via BFS"""
         if len(all_islands) == 0:
             return True
 

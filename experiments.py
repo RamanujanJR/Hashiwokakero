@@ -7,14 +7,12 @@ from model import HashiPuzzle
 from solvers import PySATSolver, AStarSolver, NaiveBacktrackingSolver, OptimizedBacktrackingSolver, BruteForceSolver
 
 class ExperimentRunner:
-    """Run experiments across multiple solvers and test cases"""
 
     def __init__(self, input_files):
         self.input_files = input_files
         self.results = []
 
     def run_all_experiments(self):
-        """Run all solvers on all test cases"""
 
         solvers_config = [
             ('PySAT', lambda p: PySATSolver(p)),

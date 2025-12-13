@@ -8,7 +8,6 @@ from logic import CNFGenerator, ConstraintPropagation
 from model import HashiPuzzle 
 
 class PySATSolver(VisualizationMixin):
-    """Solver uses PySAT library with optional Constraint Propagation"""
 
     def __init__(self, puzzle: HashiPuzzle):
         self.puzzle = puzzle
@@ -17,7 +16,6 @@ class PySATSolver(VisualizationMixin):
         self.solve_time = 0
 
     def solve(self):
-        """Solve puzzle using PySAT"""
         start_time = time.time()
 
         # Generate CNF
