@@ -3,13 +3,12 @@ import numpy as np
 import time
 from pathlib import Path
 
-# Import your solver modules
 try:
     from model import HashiPuzzle
     from solvers import PySATSolver
     from utils import BridgeUtils
 except ImportError:
-    st.error("⚠️ Không thể import các module cần thiết. Vui lòng đảm bảo các file model.py, solvers.py, logic.py, utils.py có trong cùng thư mục.")
+    st.error("Không thể import các module cần thiết. Vui lòng đảm bảo các file model.py, solvers.py, logic.py, utils.py có trong cùng thư mục.")
     st.stop()
 
 # Page config
@@ -927,7 +926,6 @@ else:
             }};
 
             const renderCell = (r, c) => {{
-                // ... (giữ nguyên phần renderCell như cũ của bạn)
                 const val = grid[r][c];
                 const isIsland = val > 0;
                 const isSelected = selectedIsland && isSamePosition(selectedIsland, {{ r, c }});

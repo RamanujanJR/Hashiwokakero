@@ -656,7 +656,7 @@ class ExperimentCoordinator:
         print("="*100)
 
         try:
-            puzzle = HashiPuzzle.read_from_file('input-07.txt')
+            puzzle = HashiPuzzle.read_from_file('inputs/input-07.txt')
             solver = AStarSolver(puzzle, use_advanced_heuristic=True)
             success, solution = solver.solve()
 
