@@ -610,10 +610,10 @@ class ExperimentCoordinator:
         results_combined = pd.concat([results_standard, results_xlarge],
                                      ignore_index=True)
 
-        results_combined.to_csv('solver_results_complete.csv', index=False)
+        results_combined.to_csv('outputs/solver_results_complete.csv', index=False)
         print("\n✓ Complete results saved to 'solver_results_complete.csv'")
 
-        results_standard.to_csv('solver_results_standard.csv', index=False)
+        results_standard.to_csv('outputs/solver_results_standard.csv', index=False)
         print("✓ Standard test results saved to 'solver_results_standard.csv'")
 
         return results_combined
