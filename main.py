@@ -26,6 +26,9 @@ def main():
     coordinator.analyze_standard_results(results_standard)
     coordinator.analyze_pysat_scalability(results_xlarge)
     coordinator.visualize_sample_solution()
+    
+    # Save all solutions to output files
+    coordinator.save_all_solutions()
 
 if __name__ == "__main__":
     main()

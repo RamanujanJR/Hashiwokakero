@@ -7,13 +7,11 @@ from model import HashiPuzzle
 from solvers import PySATSolver, AStarSolver, NaiveBacktrackingSolver, OptimizedBacktrackingSolver, BruteForceSolver
 
 class ExperimentRunner:
-
     def __init__(self, input_files):
         self.input_files = input_files
         self.results = []
 
     def run_all_experiments(self):
-
         solvers_config = [
             ('PySAT', lambda p: PySATSolver(p)),
             ('A* (Simple)', lambda p: AStarSolver(p, use_advanced_heuristic=False)),
@@ -292,7 +290,7 @@ class ResultsAnalyzer:
         # Create heatmap with better formatting
         sns.heatmap(time_pivot, annot=True, fmt='.1f', cmap='YlOrRd',
                    ax=ax4, cbar_kws={'label': 'Time (s)'},
-                   annot_kws={'fontsize': 7})  # Smaller font for annotations
+                   annot_kws={'fontsize': 7})
 
         ax4.set_title('Solve Time Heatmap', fontsize=14, fontweight='bold')
         ax4.set_xlabel('Grid Size', fontsize=11)
@@ -584,6 +582,8 @@ class ExperimentCoordinator:
             'inputs/input-24.txt',
             'inputs/input-25.txt'
         ]
+        
+        self.all_input_files = self.input_files_standard + self.input_files_xlarge
 
     def run_phase1(self):
         """Phase 1: Standard test suite with all solvers"""
@@ -670,3 +670,71 @@ class ExperimentCoordinator:
                     solver.visualize_solution(title="PySAT Solution for 10x10 Puzzle (35 islands)")
         except Exception as e:
             print(f"Visualization error: {str(e)}")
+    
+    def save_all_solutions(self):
+        """Save all puzzle solutions to output files (output-01.txt to output-25.txt)"""
+        print("\n" + "="*100)
+        print("SAVING ALL SOLUTIONS TO OUTPUT FILES")
+        print("="*100)
+        
+        for input_file in self.all_input_files:
+            # Extract input number (e.g., "01" from "inputs/input-01.txt")
+            input_num = input_file.split('-')[1].split('.')[0]
+            output_file = f'outputs/output-{input_num}.txt'
+            
+            print(f"\nProcessing {input_file}...")
+            
+            try:
+                puzzle = HashiPuzzle.read_from_file(input_file)
+                
+                # Use PySAT solver for all puzzles (fastest and most reliable)
+                solver = PySATSolver(puzzle)
+                success, solution = solver.solve()
+                
+                if success:
+                    # Get visualization output
+                    output_grid = self._get_solution_grid(puzzle, solution)
+                    
+                    # Save to file
+                    with open(output_file, 'w') as f:
+                        for row in output_grid:
+                            line = ', '.join([f'"{cell.strip()}"' for cell in row])
+                            f.write('[' + line + ']\n')
+                    
+                    print(f"  ✓ Saved solution to {output_file}")
+                else:
+                    print(f"  ✗ Could not solve {input_file}")
+                    
+            except Exception as e:
+                print(f"  ✗ Error processing {input_file}: {str(e)}")
+        
+        print("\n" + "="*100)
+        print("ALL SOLUTIONS SAVED")
+        print("="*100)
+    
+    def _get_solution_grid(self, puzzle, solution):
+        """Generate solution grid (same format as visualize_solution)"""
+        rows, cols = puzzle.rows, puzzle.cols
+        output = [[' 0 ' for _ in range(cols)] for _ in range(rows)]
+
+        # Place islands
+        for r, c, val in puzzle.islands:
+            output[r][c] = f' {val} '
+
+        # Place bridges
+        for (island1, island2), num_bridges in solution.items():
+            r1, c1 = island1
+            r2, c2 = island2
+
+            if r1 == r2:  # Horizontal
+                symbol = ' = ' if num_bridges == 2 else ' - '
+                min_c, max_c = min(c1, c2), max(c1, c2)
+                for c in range(min_c + 1, max_c):
+                    output[r1][c] = symbol
+            else:  # Vertical
+                symbol = ' $ ' if num_bridges == 2 else ' | '
+                min_r, max_r = min(r1, r2), max(r1, r2)
+                for r in range(min_r + 1, max_r):
+                    output[r][c1] = symbol
+
+        return output
